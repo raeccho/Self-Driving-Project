@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Delivery Robots</title>
+    <link rel="stylesheet" href="article123.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="icon" type="image/png" href="favicon.svg">
+</head>
+<body>
+    <header>
+    <div class="logo">
+    <a href="index.html">
+    <img src="favicon.svg" alt="JD's CCT Logo" />
+    </a>
+    <span class="company-name">JIADUAN</span>
+    </div>
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="article.html">Articles</a>
+    <a href="python.html">Python</a>
+    <a href="contact.html">Contact</a>
+    </nav>
+    </header>
+    <main>
+        <section class="article-container">
+            <h2>Autonomous Delivery Robots</h2>
+            <div class="article-content">
+                <img src="1.jpg" alt="Autonomous delivery robot on sidewalk">
+                <div class="article-text">
+                    <h3>Revolutionizing Urban Logistics</h3>
+                    <p>Autonomous delivery robots are transforming last-mile logistics by offering efficient, scalable solutions for urban deliveries. These self-navigating machines rely on advanced hardware like high-resolution cameras, LiDAR, ultrasonic sensors, and GPS for real-time environmental perception and navigation.</p>
+                    <p>Powered by electric motors and lithium-ion batteries, they achieve 4-6 mile ranges per charge, with NVIDIA's Jetson processors enabling real-time obstacle detection and path planning. The software stack includes machine learning for object recognition, simultaneous localization and mapping (SLAM) for navigation, and 4G/5G-enabled fleet management systems for route optimization.</p>
+                    <p>By 2030, solid-state LiDAR and next-generation batteries, such as solid-state models, could extend ranges to 10-15 miles and reduce costs. Advanced AI may predict pedestrian behavior, while vehicle-to-everything (V2X) communication integrates robots with smart cities, and blockchain could secure delivery tracking. These robots cut delivery costs by up to 70% and reduce emissions, enhancing sustainability and access to goods.</p>
+                    </div>                
+                </div>
+            </div>
+        </section>
+    </main>
+        <div class="pagination">
+            <a href="article.html" class="page-btn">1</a>
+            <button class="page-btn active">2</button>
+            <a href="article2.html" class="page-btn">3</a>
+            <a href="article3.html" class="page-btn">4</a>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const navbarHeight = document.querySelector('nav').offsetHeight;
+            const offsetTop = section.offsetTop - navbarHeight;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+    <footer class="footer">
+    <div class="footer-content">
+    <div class="footer-logo">
+        <h2>JIADUAN</h2>
+    </div>
+    <div class="footer-contact">
+        <p>Email: <a href="mailto:raeccho@gmail.com">raeccho@gmail.com</a></p>
+    </div>
+    <div class="footer-links">
+        <a href="index.html">HOME</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+    </div>
+    <div class="footer-bottom">
+    <p>Copyright ©️ 2025 JIADUAN All Rights Reserved.</p>
+    </div>
+    </footer>
+</body>
+</html>

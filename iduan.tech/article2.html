@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Driving Shuttles in Smart Cities</title>
+    <link rel="stylesheet" href="article123.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="icon" type="image/png" href="favicon.svg">
+</head>
+<body>
+    <header>
+    <div class="logo">
+    <a href="index.html">
+    <img src="favicon.svg" alt="JD's CCT Logo" />
+    </a>
+    <span class="company-name">JIADUAN</span>
+    </div>
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="article.html">Articles</a>
+    <a href="python.html">Python</a>
+    <a href="contact.html">Contact</a>
+    </nav>
+    </header>
+    <main>
+        <section class="article-container">
+            <h2>Self-Driving Shuttles in Smart Cities</h2>
+            <div class="article-content">
+                <img src="2.jpg" alt="Self-driving shuttle in urban setting">
+                <div class="article-text">
+                    <h3>Enhancing Urban Mobility</h3>
+                    <p>Artificial Intelligence (AI) is transforming urban mobility through self-driving shuttles, enhancing safety, reducing congestion, and improving accessibility in smart cities. This article analyzes the current hardware and software requirements, predicts future developments, and evaluates the pros and cons of these advancements.</p>
+                    <p>Self-driving shuttles rely on high-resolution cameras, radar, LiDAR, and ultrasonic sensors to generate real-time environmental data. LiDAR creates 3D maps for precise obstacle detection, while cameras and radar enable object recognition and distance measurement. High-performance computing units, often with GPUs, process data for real-time navigation, requiring robust power and cooling systems. Software, powered by deep neural networks, analyzes sensor data to identify objects, predict pedestrian behavior, and plan routes, demanding high reliability and cybersecurity to prevent hacking.</p>
+                    <p>Future hardware will likely include compact, cost-effective sensors like next-generation LiDAR and neuromorphic chips, improving energy efficiency. 6G networks will enhance V2X communication with low latency. Software advancements, such as reinforcement learning, will enable shuttles to adapt to complex scenarios like construction zones or erratic pedestrian behavior.</p>
+                    </div>                
+                </div>
+            </div>
+        </section>
+    </main>
+        <div class="pagination">
+            <a href="article.html" class="page-btn">1</a>
+            <a href="article1.html" class="page-btn">2</a>
+            <button class="page-btn active">3</button>
+            <a href="article3.html" class="page-btn">4</a>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const navbarHeight = document.querySelector('nav').offsetHeight;
+            const offsetTop = section.offsetTop - navbarHeight;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+    <footer class="footer">
+    <div class="footer-content">
+    <div class="footer-logo">
+        <h2>JIADUAN</h2>
+    </div>
+    <div class="footer-contact">
+        <p>Email: <a href="mailto:raeccho@gmail.com">raeccho@gmail.com</a></p>
+    </div>
+    <div class="footer-links">
+        <a href="index.html">HOME</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+    </div>
+    <div class="footer-bottom">
+    <p>Copyright ©️ 2025 JIADUAN All Rights Reserved.</p>
+    </div>
+    </footer>
+</body>
+</html>

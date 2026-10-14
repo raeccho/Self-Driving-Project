@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barriers and Opportunities for Autonomous Driving by 2050</title>
+    <link rel="stylesheet" href="article.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="icon" type="image/png" href="favicon.svg">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="favicon.svg" alt="JD's CCT Logo">
+            </a>
+            <span class="company-name">JIADUAN</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="article.html">Articles</a>
+            <a href="python.html">Python</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="article-container">
+            <iframe
+                class="article-frame"
+                src="Barriers%20and%20Opportunities%20for%20Autonomous%20Driving%20by%202050.html"
+                title="Barriers and Opportunities for Autonomous Driving by 2050"
+                scrolling="auto"
+                onload="resizeArticleFrame(this)">
+            </iframe>
+        </section>
+    </main>
+
+    <div class="article-actions">
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <a href="article1.html" class="page-btn">2</a>
+            <a href="article2.html" class="page-btn">3</a>
+            <a href="article3.html" class="page-btn">4</a>
+        </div>
+        <a
+            class="download-btn"
+            href="Barriers%20and%20Opportunities%20for%20Autonomous%20Driving%20by%202050.pdf"
+            download>
+            下载 PDF
+        </a>
+    </div>
+
+    <script>
+        let articleFrame = null;
+        let resizeTimer = null;
+
+        function resizeArticleFrame(frame) {
+            articleFrame = frame;
+            let doc = null;
+
+            try {
+                doc = frame.contentDocument || frame.contentWindow.document;
+            } catch (error) {
+                frame.style.height = `${getArticleFallbackHeight()}px`;
+                return;
+            }
+
+            if (!doc) {
+                frame.style.height = `${getArticleFallbackHeight()}px`;
+                return;
+            }
+
+            if (!doc.getElementById('journal-display-style')) {
+                const style = doc.createElement('style');
+                style.id = 'journal-display-style';
+                style.textContent = `
+                    html,
+                    body {
+                        margin: 0 !important;
+                        padding: 0 !important;
+                        background: #fff !important;
+                        overflow: visible !important;
+                    }
+
+                    body {
+                        font-family: "Times New Roman", Times, serif !important;
+                        color: #111827 !important;
+                    }
+
+                    .WordSection1 {
+                        width: min(100%, 900px) !important;
+                        margin: 0 auto !important;
+                        padding: 0 clamp(24px, 4vw, 40px) 1px !important;
+                        background: #fff !important;
+                        box-sizing: border-box !important;
+                    }
+
+                    h1,
+                    h2,
+                    h3,
+                    p {
+                        color: #1f2933 !important;
+                    }
+
+                    p.MsoNormal {
+                        margin: 0 0 12px !important;
+                        line-height: 1.45 !important;
+                        text-align: justify !important;
+                    }
+
+                    p.MsoNormal:first-child,
+                    p.MsoNormal:nth-child(2) {
+                        text-align: center !important;
+                    }
+
+                    span {
+                        line-height: inherit !important;
+                    }
+
+                    a {
+                        overflow-wrap: anywhere !important;
+                    }
+                `;
+                doc.head.appendChild(style);
+            }
+
+            fitArticleFrame(frame);
+
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => fitArticleFrame(frame), 250);
+            setTimeout(() => fitArticleFrame(frame), 750);
+            setTimeout(() => fitArticleFrame(frame), 1500);
+        }
+
+        function fitArticleFrame(frame) {
+            let doc = null;
+
+            try {
+                doc = frame.contentDocument || frame.contentWindow.document;
+            } catch (error) {
+                frame.style.height = `${getArticleFallbackHeight()}px`;
+                return;
+            }
+
+            if (!doc) {
+                frame.style.height = `${getArticleFallbackHeight()}px`;
+                return;
+            }
+
+            requestAnimationFrame(() => {
+                const section = doc.querySelector('.WordSection1');
+                const height = section
+                    ? Math.max(
+                        section.scrollHeight,
+                        section.offsetHeight,
+                        section.getBoundingClientRect().bottom
+                    )
+                    : Math.max(doc.body.scrollHeight, doc.body.offsetHeight);
+
+                frame.style.height = `${Math.ceil(height + 2)}px`;
+            });
+        }
+
+        function getArticleFallbackHeight() {
+            const reservedSpace = window.matchMedia('(max-width: 768px)').matches ? 170 : 180;
+            return Math.max(window.innerHeight - reservedSpace, 560);
+        }
+
+        window.addEventListener('resize', () => {
+            if (articleFrame) {
+                fitArticleFrame(articleFrame);
+            }
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>JIADUAN</h2>
+            </div>
+            <div class="footer-contact">
+                <p>Email: <a href="mailto:raeccho@gmail.com">raeccho@gmail.com</a></p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">HOME</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright ©️ 2025 JIADUAN All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
